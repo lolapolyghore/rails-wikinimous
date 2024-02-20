@@ -1,0 +1,10 @@
+<h1><%= @article.title %></h1>
+
+<p><%= @article.content %></p>
+
+<%= link_to edit_article_path(@article), class: 'btn btn-primary me-2' do %>
+  <i class="fa-solid fa-pen-to-square"></i> Edit
+<% end %>
+<%= link_to article_path(@article), method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger', id: 'delete-article' do %>
+  <i class="fa-solid fa-trash"></i> Destroy
+<% end %>

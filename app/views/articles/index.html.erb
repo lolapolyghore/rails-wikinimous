@@ -1,0 +1,12 @@
+<div class="container text-center">
+  <h1 class="display-4">Articles</h1>
+</div>
+
+<div class="list-group">
+  <% @articles.each do |article| %>
+    <a href="<%= article_path(article) %>" class="list-group-item list-group-item-action">
+      <h5 class="text-primary-emphasis mb-1" id="title"><%= article.title %></h5>
+      <p class="mb-1 fst-italic"><%= article.content.truncate(80) %></p>
+    </a>
+  <% end %>
+</div>
